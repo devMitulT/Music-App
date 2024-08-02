@@ -1,8 +1,7 @@
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import { logo } from '../utils/constants';
-import { Search } from '@mui/icons-material';
 
 function NavBar() {
   return (
@@ -19,6 +18,13 @@ function NavBar() {
     >
       <Link to='/' style={{ display: 'flex', alignItems: 'center' }}>
         <img src={logo} alt='logo' height={45} />
+        <Typography
+          className='copyright'
+          variant='h4'
+          sx={{ mt: 1.5, color: '#fff', marginLeft: '10px' }}
+        >
+          You Stream Daily
+        </Typography>
       </Link>
       <SearchBar />
     </Stack>
